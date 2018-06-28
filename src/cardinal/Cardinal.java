@@ -11,11 +11,28 @@ package cardinal;
  */
 public class Cardinal {
 
-    /**
-     * @param args the command line arguments
-     */
+    String name = "Cardinal";
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Animal a = new Animal();
+        a.name = "richlieu";
+        a.talk();
+        ladyCardinal b = new ladyCardinal();
+        b.talk();
     }
     
+}
+
+class Animal{
+    public String name = "Animal";
+    public String food = "Food";
+    
+    public void talk(){
+        System.out.println(name+" says: hey doods");
+        
+    }
+}
+
+class ladyCardinal extends Animal{
+    public String name="girlbird";
 }
